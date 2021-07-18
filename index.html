@@ -15,24 +15,24 @@
     background-position: bottom;
   background-attachment: fixed;
   background-size: cover;
-  height: 100%;
+  width: 100%;
   }
   </style>
  <body style="background-color:#F1F4F1;">
 
     <div id="menu">
-      <div class="container">
 
-        
+      <!-- The sidebar -->
+      <div class="sidebar">
          <a href="index.html">
           <div class="header">
-             <h1>giada cicchetti</h1> 
+             <h1 style="font: size 100%;">giada cicchetti</h1> 
          </div>
         </a>
        
         <button  class="dropdown-btn">work <i class="fa fa-caret-down"></i> </button>
 
-          <div class="dropdown-container">
+        <div class="dropdown-container">
             <a href="sito_la ballata.html">la ballata del rimorso</a>
             <a href="sito_beste.html">beste giada</a>
             <a href="sito_the sun beyond your eyes.html">the sun beyond your eyes</a>
@@ -45,6 +45,9 @@
       </div>
     </div>
 
+    
+   <!-- Page content -->
+   <div class="content">
     <script>
       /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
       var dropdown = document.getElementsByClassName("dropdown-btn");
