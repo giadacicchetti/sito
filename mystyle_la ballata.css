@@ -43,7 +43,7 @@ p {
   left: 0;
   position: fixed;
   height: 100%;
-  background-color: #f1f4f100;
+  background-color: #f1f4f1;
   padding: 18px 0px 0px 30px;
 }
 
@@ -127,15 +127,15 @@ p {
 }
 
 #img-container {  
-    padding: 100px 10px 0px 260px ; 
-    width: 6700px;
+    padding: 80px 0px 0px 260px ; 
+    width: 8000px;
     height: 500px;
     position: absolute;
     z-index: -1;
 }
 
 .picture_holder  {
-  width: 6500px;
+  width: 8000px;
     height: 500px;
 }
 
