@@ -3,14 +3,27 @@ body {
   font-family: 'Bodoni Moda', serif;
 }
 
-.header {
-  text-align: left;
-  color:lightslategray; 
-  font-family: 'microsoft himalaya';
-  font-size: 20px;
+/* If the screen size is 601px or more, set the font-size of <div> to 20px */
+@media only screen and (min-width: 601px) {
 
-    display: block;
-}
+  .header {
+   text-align: left;
+   color:lightslategray; 
+   font-family: 'Microsoft Himalaya';
+   font-size: 20px;
+   display: block;
+  }
+ } 
+ /* If the screen size is 600px or less, set the font-size of <div> to 13px */
+ @media only screen and (max-width: 600px) {
+   .header {
+     text-align: left;
+     color:lightslategray; 
+     font-family: 'Microsoft Himalaya';
+     font-size: 13px;
+     display: block;
+   }
+ }
 
 h2 {
     font-size: 17px;
@@ -47,11 +60,31 @@ a {
   #menu a {font-size: 18px;}
 }
 
-/* Style the sidenav links and the dropdown button */
+/* If the screen size is 601px or more, set the font-size of <div> to 18px */
+@media only screen and (min-width: 601px) {
+  /* Style the sidenav links and the dropdown button */
 #menu a, .dropdown-btn {
+  padding: 6px 8px 6px 5px;
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(98, 109, 117);
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  font-family: "microsoft himalaya";
+}
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 10px */
+@media only screen and (max-width: 600px) {
+  #menu a, .dropdown-btn {
     padding: 6px 8px 6px 5px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 13px;
     color: rgb(98, 109, 117);
     display: block;
     border: none;
@@ -62,6 +95,7 @@ a {
     outline: none;
     font-family: "microsoft himalaya";
   }
+}
 
   /* On mouse-over */
 #menu a:hover, .dropdown-btn:hover {
@@ -101,7 +135,8 @@ a {
 
 .picture_holder  {
   float: left;
-  padding: 0px 0px 0px 500px ;
+  overflow: auto;
+  padding: 0px 210px 0px 500px ;
   text-align: justify;
   line-height: 18px;
     height: 600px;
@@ -112,11 +147,23 @@ a {
     float: left;
 }
 
-#footer {
-  position: fixed;
-  padding-top: 5px;
-  bottom: 10px;
-  font-size: 9px;
-  color: #cccccc;
-  z-index: -1 !important;
-}
+  /* If the screen size is 600px wide or less, hide the element */
+  @media only screen and (max-width: 600px) {
+    #footer {
+      display: none;
+    }
+  
+  }
+  
+  #footer {
+    position: fixed;
+    display: block;
+    overflow: auto;
+    outline: none;
+    padding-left: 600px;
+    bottom: 0px;
+    font-size: 9px;
+    background-color: #F1F4F1;
+    color: #878787;
+    z-index: -1 !important;
+  }

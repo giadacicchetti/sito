@@ -3,14 +3,27 @@ body {
   font-family: 'Bodoni Moda', serif;
 }
 
-.header {
-  text-align: left;
-  color:lightslategray; 
-  font-family: 'Microsoft Himalaya';
-  font-size: 20px;
+/* If the screen size is 601px or more, set the font-size of <div> to 20px */
+@media only screen and (min-width: 601px) {
 
-    display: block;
-}
+  .header {
+   text-align: left;
+   color:lightslategray; 
+   font-family: 'Microsoft Himalaya';
+   font-size: 20px;
+   display: block;
+  }
+ } 
+ /* If the screen size is 600px or less, set the font-size of <div> to 13px */
+ @media only screen and (max-width: 600px) {
+   .header {
+     text-align: left;
+     color:lightslategray; 
+     font-family: 'Microsoft Himalaya';
+     font-size: 13px;
+     display: block;
+   }
+ }
 
 h2 {
     font-size: 17px;
@@ -34,16 +47,31 @@ p {
     padding: 18px 0px 0px 30px;
 }
 
-@media screen and (max-height: 450px) {
-  #menu {padding-top: 18px;}
-  #menu a {font-size: 18px;}
+/* If the screen size is 601px or more, set the font-size of <div> to 18px */
+@media only screen and (min-width: 601px) {
+  /* Style the sidenav links and the dropdown button */
+#menu a, .dropdown-btn {
+  padding: 6px 8px 6px 5px;
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(98, 109, 117);
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  font-family: "microsoft himalaya";
+}
 }
 
-/* Style the sidenav links and the dropdown button */
-#menu a, .dropdown-btn {
+/* If the screen size is 600px or less, set the font-size of <div> to 10px */
+@media only screen and (max-width: 600px) {
+  #menu a, .dropdown-btn {
     padding: 6px 8px 6px 5px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 13px;
     color: rgb(98, 109, 117);
     display: block;
     border: none;
@@ -54,6 +82,8 @@ p {
     outline: none;
     font-family: "microsoft himalaya";
   }
+}
+
 
   /* On mouse-over */
 #menu a:hover, .dropdown-btn:hover {
@@ -109,11 +139,20 @@ p {
     float: left;
 }
 
+ /* If the screen size is 600px wide or less, hide the element */
+ @media only screen and (max-width: 600px) {
+  #footer {
+    display: none;
+  }
+
+}
+
 #footer {
-    position: fixed;
-    padding-top: 10px;
-    bottom: 5px;
-    font-size: 9px;
-    color: #cccccc;
-    z-index: -1 !important;
+  position: fixed;
+  height: 33px;
+  padding-left: 600px;
+  bottom: 0px;
+  font-size: 9px;
+  color: #878787;
+  z-index: -1 !important;
 }
