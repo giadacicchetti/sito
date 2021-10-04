@@ -114,10 +114,10 @@ p {
 }
 
 .description{
-    float: left;
+  float: left;
     width: 400px;
     text-align: justify;
-    line-height: 18px;
+    line-height: 19px;
 }
 
 #img-container {  
